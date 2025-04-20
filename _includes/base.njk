@@ -1,0 +1,48 @@
+---
+title: eddex
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/picnic.min.css" />
+    <link rel="stylesheet" href="/prism-tomorrow.min.css" />
+    <link rel="stylesheet" href="/custom.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="brand">
+        <img class="logo round-image" src="/img/eddex.jpeg" />
+        <span>eddex</span>
+      </a>
+
+      <!-- responsive-->
+      <input id="bmenub" type="checkbox" class="show" />
+      <label for="bmenub" class="burger pseudo button">&#8801;</label>
+
+      <!-- custom rendering of nav to only display top level items -->
+      <div class="menu">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+        <div class="nav-item">
+          <a class="pseudo button" href="{{ entry.url }}"><span{% if entry.url == page.url %} class="red"{% endif %}>{{ entry.title }}</span></a>
+        </div>
+        {%- endfor %}
+      </div>
+    </nav>
+    <main id="content" class="content">
+      <section>
+        {{ content | safe }}
+      </section>
+    </main>
+    <footer id="footer">
+      <p>
+        © {% year %} by eddex. Content licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC-BY-4.0</a>.
+      </p>
+    </footer>
+  </body>
+</html>

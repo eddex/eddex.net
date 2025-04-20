@@ -1,0 +1,18 @@
+---
+layout: base.njk
+eleventyNavigation:
+  key: Blog
+  order: 20
+---
+
+<h1>Blog <img src="/img/feather.svg" class="icon" /></h1>
+
+{% set navPages = collections.all | eleventyNavigation("Blog") %}
+
+<ul>
+{%- for entry in navPages %}
+  <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+    <a href="{{ entry.url }}">{{ entry.title }}</a><span> – {{ entry.excerpt }}</span>
+  </li>
+{%- endfor %}
+</ul>

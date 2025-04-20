@@ -1,0 +1,70 @@
+body {
+  background-image: url("/img/pink_rice.png");
+}
+
+.round-image {
+  border-radius: 50%; /* Make it a circle */
+}
+
+.nav {
+  background: #fcf6f2;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  float: right;
+}
+
+.content {
+  background: #fffcfa;
+  text-align: left;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 25px 10px;
+}
+
+footer {
+  background: #fffcfa;
+  text-align: left;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 25px;
+  color: gray;
+}
+
+@media (max-width: 960px) {
+  .nav {
+    width: 100%;
+  }
+  .nav-item {
+    float: none;
+  }
+  .content {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+.icon {
+  vertical-align: text-bottom;
+  width: 1em;
+}
+
+/* color overrides */
+.bg-red {
+  background: #85144b;
+}
+
+.red {
+  color: #85144b;
+}
+
+a {
+  color: #85144b;
+}

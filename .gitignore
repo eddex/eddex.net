@@ -1,0 +1,5 @@
+# eleventy
+_site/
+
+# nodejs
+node_modules/
