@@ -4,8 +4,13 @@ The 3rd iteration of my personal website. Fully static, no client side js.
 
 ## 🧑‍💻 Development
 
+- Install dependencies: `npm i`
 - Build: `npx @11ty/eleventy`
 - Development server: `npx @11ty/eleventy --serve`
+
+### Deployment
+
+Deployment is automatically done using a GitHub action. The action is triggered when pushing to the `main` branch.
 
 ## 🙏 Attributions
 
