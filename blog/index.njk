@@ -7,7 +7,7 @@ eleventyNavigation:
 
 <h1>Blog <img src="/img/feather.svg" class="icon" /></h1>
 
-{% set navPages = collections.all | eleventyNavigation("Blog") %}
+{% set navPages = collections.all | eleventyNavigation("Blog") | reverse %}
 
 <ul>
 {%- for entry in navPages %}
